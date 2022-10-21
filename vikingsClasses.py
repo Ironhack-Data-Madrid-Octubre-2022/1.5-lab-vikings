@@ -64,18 +64,16 @@ class War:
         
     def addViking(self, Viking ):
         self.vikingArmy.append(Viking)
-        print("lista vikinga", self.vikingArmy)
+        
         
     def addSaxon(self, Saxon):
-        self.saxonArmy.append(Saxon)
-        print("lista sajona", self.saxonArmy)
+        self.saxonArmy.append(Saxon)    
         
     
     def vikingAttack(self):
         sajon=random.choice(self.saxonArmy)
         vikingo=random.choice(self.vikingArmy)
-        print("vikingo",type(vikingo))
-        print("sajon" ,type(sajon))
+        
         resultado_atk=sajon.receiveDamage(vikingo.attack())
         if sajon.health<=0:
             self.saxonArmy.remove(sajon)
@@ -87,8 +85,7 @@ class War:
         
         sajon=random.choice(self.saxonArmy)
         vikingo=random.choice(self.vikingArmy)
-        print("vikingo",type(vikingo))
-        print("sajon" ,type(sajon))
+        
         resultado_atk=vikingo.receiveDamage(sajon.attack())
         if vikingo.health<=0:
             self.vikingArmy.remove(vikingo)
@@ -105,21 +102,7 @@ class War:
         
     
         
-'''Erik=Viking('HArald', 300,150) 
-Arnulf=Saxon(60,25)  
-Combate=War()   
-Combate.addSaxon(Arnulf)
-Combate.addViking(Erik)
 
-#print("Daño recibido",Erik.receiveDamage(25))
-#Combate.prueba()
-
-Combate.showStatus()
-
-#print(Combate.vikingAttack())
-print(Combate.saxonAttack())
-
-Combate.showStatus()'''
 
 if __name__ == "__name__":
     ...
