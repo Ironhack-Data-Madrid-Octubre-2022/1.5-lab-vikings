@@ -92,7 +92,7 @@ class War:
         
     def vikingAttack(self):
         
-            attv = random.choice(self.vikingArmy)
+        attv = random.choice(self.vikingArmy)
             
         atts = random.choice(self.saxonArmy)
         
@@ -102,13 +102,6 @@ class War:
             
             self.saxonArmy.remove(atts)
             
-        return resultado
-    
-    def saxonAttack(self):
-        
-      
-        
-    
-    
+       
 
 
