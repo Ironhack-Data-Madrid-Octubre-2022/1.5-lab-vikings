@@ -1,5 +1,6 @@
 
 # Soldier
+1
 
 
 class Soldier:
