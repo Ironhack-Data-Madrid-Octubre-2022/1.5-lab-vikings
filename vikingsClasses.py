@@ -1,6 +1,6 @@
 
 # Soldier
-
+import random
 
 class Soldier:
     def __init__(self, health, strength):
@@ -26,7 +26,7 @@ class Viking(Soldier):
         
     def receiveDamage(self,damage):
         self.health-=damage
-        
+        print("Vida1", self.health)
         if self.health>0:
             return f"{self.name} has received {damage} points of damage"
         if self.health<=0:
@@ -64,23 +64,38 @@ class War:
         
     def addViking(self, Viking ):
         self.vikingArmy.append(Viking)
+        print("lista vikinga", self.vikingArmy)
         
     def addSaxon(self, Saxon):
         self.saxonArmy.append(Saxon)
+        print("lista sajona", self.saxonArmy)
         
+    def prueba(self):
+        sajon=self.saxonArmy[0]
+        print(sajon)
     def vikingAttack(self):
-        prueba=self.saxonArmy[0]
-        prueba.receiveDamage(Viking.attack)
-        if prueba.health<=0:
+        sajon=self.saxonArmy[0]
+        vikingo=self.vikingArmy[0]
+        print("vikingo",type(vikingo))
+        print("sajon" ,type(sajon))
+        resultado_atk=sajon.receiveDamage(vikingo.attack())
+        if sajon.health<=0:
             self.saxonArmy.pop()
-        return prueba.receiveDamage()
+        
+        return resultado_atk
+        
     
     def saxonAttack(self):
         
-        Viking.receiveDamage(Saxon.attack)
-        if Viking.health<=0:
+        sajon=self.saxonArmy[0]
+        vikingo=self.vikingArmy[0]
+        print("vikingo",type(vikingo))
+        print("sajon" ,type(sajon))
+        resultado_atk=vikingo.receiveDamage(sajon.attack())
+        if vikingo.health<=0:
             self.vikingArmy.pop()
-        return Viking.receiveDamage()
+        
+        return resultado_atk
     
     def showStatus(self):
         if len(self.saxonArmy)==0:
@@ -92,4 +107,20 @@ class War:
         
     
         
-        
+Erik=Viking('HArald', 300,150) 
+Arnulf=Saxon(60,25)  
+Combate=War()   
+Combate.addSaxon(Arnulf)
+Combate.addViking(Erik)
+
+#print("Daño recibido",Erik.receiveDamage(25))
+#Combate.prueba()
+
+Combate.showStatus()
+
+#print(Combate.vikingAttack())
+print(Combate.saxonAttack())
+
+Combate.showStatus()
+
+
