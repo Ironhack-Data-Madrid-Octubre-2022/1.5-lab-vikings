@@ -34,6 +34,9 @@ class Viking(Soldier):
         
     def battleCry(self):
         return "Odin Owns You All!"
+    
+    def __str__(self):
+        return f"el nombre del vikingo es {Viking.name}, su vida es {Viking.health} y su ataque es {Viking.strength} "
 
 # Saxon
 
@@ -99,6 +102,11 @@ class War:
             return "Saxons have fought for their lives and survive another day..."
         else:
             return "Vikings and Saxons are still in the thick of battle."
+        
+        
+        
+        
+   
         
     
         
