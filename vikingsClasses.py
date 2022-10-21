@@ -1,6 +1,7 @@
 # testear en la consola cargando el archivo que es .py con python delante, es decir, python 1-testsSoldier.py. Previamente conda activate clase
 # Soldier
 
+import random
 
 class Soldier:
     
@@ -85,14 +86,11 @@ class War():
         
     def addViking(self, Viking):
         
-        self.Viking=Viking
         self.vikingArmy.append(Viking)
         
-    
 
     def addSaxon(self, Saxon):
-        
-        self.Saxon=Saxon
+
         self.saxonArmy.append(Saxon)
         
     def receiveDamage(self, damage):    
@@ -102,34 +100,39 @@ class War():
         
             
     def vikingAttack(self):
+        vikingo=random.choice(self.vikingArmy)
+        sajon=random.choice(self.saxonArmy)
         
-        Saxon.__init__(self.receiveDamage()) == Viking.__init__(self.strength())
+        vida=sajon.receiveDamage(vikingo.strength)
         
-        if Saxon.__init__(self.health()) in seslf.saxonArmy == 0 : self.saxonArmy.clear()
+        if sajon.health<=0: 
+            self.saxonArmy.remove(sajon)
 
-        
+        return vida
 
     
     
     
     def saxonAttack(self):
-        
-        Viking.__init__(self.receiveDamage()== Saxon.__init__(self.strength())
-      
-       
-        if Vikin.__init__(self.health()) in self.vikingArmy == 0 : self.vikingArmy.clear()
-
-            
     
+        vikingo=random.choice(self.vikingArmy)
+        sajon=random.choice(self.saxonArmy)
+        
+        vida=vikingo.receiveDamage(sajon.strength)
+        
+        if vikingo.health<=0: 
+            self.vikingArmy.remove(vikingo)
+
+        return vida
     
     
     def showStatus(self):
         
-        if Viking not in self.vikingArmy:
+        if len(self.vikingArmy) == 0 and len(self.saxonArmy) > 0:
             return "Saxons have fought for their lives and survive another day..."
-        if Saxon not in self.saxonArmy:
+        if len(self.saxonArmy) == 0 and len(self.vikingArmy) > 0:
             return "Vikings have won the war of the century!"
-        if Viking in self.vikingArmy and self.saxonArmy:
+        if len(self.vikingArmy) > 0 and len(self.saxonArmy) > 0:
             return "Vikings and Saxons are still in the thick of battle."
     
     
