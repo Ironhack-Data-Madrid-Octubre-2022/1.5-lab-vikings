@@ -6,12 +6,12 @@ def insertar_vikingos(*args,**kvargs):
         print("e es", e)
         for ex in e:
             print("ex es", ex)
-            '''for n,h,s in ex.items():
+            for n in ex.values():
                 print("n es",n)
-                print(h)
-                print(s)
-                vikingo=Viking(n,h,s)
-                guerra.addViking'''
+                
+                
+                #vikingo=Viking(n,h)
+                #guerra.addViking
             
     print(guerra.vikingArmy)
     
@@ -37,8 +37,8 @@ insertar_vikingos(lista)
 
 
 '''for e in lista:
-    for k,v in e.items():
-        print(k,v)'''
+    for k in e.values():
+        print(k)'''
     
     
         

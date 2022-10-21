@@ -78,7 +78,7 @@ class War:
         print("sajon" ,type(sajon))
         resultado_atk=sajon.receiveDamage(vikingo.attack())
         if sajon.health<=0:
-            self.saxonArmy.pop()
+            self.saxonArmy.remove(sajon)
         
         return resultado_atk
         
@@ -91,7 +91,7 @@ class War:
         print("sajon" ,type(sajon))
         resultado_atk=vikingo.receiveDamage(sajon.attack())
         if vikingo.health<=0:
-            self.vikingArmy.pop()
+            self.vikingArmy.remove(vikingo)
         
         return resultado_atk
     
