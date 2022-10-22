@@ -73,13 +73,21 @@ class War:
         sajon = random.choice(self.saxonArmy)
         vikingo = random.choice(self.saxonArmy)
         
+        sajon = Saxon(Viking.strength)#strengthviking
+        viking = Viking(Saxon.strength)#strengthsajon
+        
+        #En python, a los atributos se accede con la sintaxis objeto.atributo y a los métodos con objeto.metodo().
+                   
+                   
+
+        
         sajon.receiveDamage(self,damage)
         
         
         
         
         
-        Saxon(damage) == self.strength
+        
         self.vikingArmy.pop()
         return receiveDamage(self,damage)
         
