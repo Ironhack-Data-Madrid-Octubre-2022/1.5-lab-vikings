@@ -62,6 +62,18 @@ class Saxon(Soldier):
             return f'A Saxon has died in combat'
 
 # War
-
-
+class war:
+    
+    vikingArmy = []
+    saxonArmy = []
+    
+    def addViking(self, Viking):
+        
+        vikingArmy.append(Viking)
+        
+    def addSaxon(self, Saxon)
+    
+        saxonArmy.append(saxon)
+        
+    def vikingAttack()
 
